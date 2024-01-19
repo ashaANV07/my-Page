@@ -29,32 +29,41 @@ function App() {
     setFormData((prevData) => ({
       ...prevData,
       page4Data: data,
-    }));                                                                                
+    }));
   };
 
   const handleBidding = () => {
     console.log("Page Data:", formData);
   };
-  
+
   return (
-    <Grid container
-    spacing={3}
-    direction="row"
-    alignItems="center"
-    justifyContent="center"
-    // sx={{ minHeight: "100vh",
-    // minWidth: "10vh" }}
+    <Grid
+      container
+      spacing={3}
+      direction="row"
+      alignItems="center"
+      justifyContent="center"
+      // sx={{ minHeight: "100vh",
+      // minWidth: "10vh" }}
     >
-      <Grid item xs={12} md={12} sx={{ borderRadius: 1, bgcolor: "#a5d6a7" ,justifyContent: "center",
-          alignItems: "center"}}> 
-        <Typography
-          variant="h6"
-          gutterBottom
-          sx = {{padding: '10px'}}
-        >
+      <Grid
+        item
+        xs={12}
+        md={12}
+        sx={{
+          borderRadius: 1,
+          bgcolor: "#a5d6a7",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Typography variant="h6" gutterBottom sx={{ padding: "10px" }}>
           Note:
-          <Typography variant="body1" gutterBottom sx={{ justifyContent: "center",
-          alignItems: "center"}}>
+          <Typography
+            variant="body1"
+            gutterBottom
+            sx={{ justifyContent: "center", alignItems: "center" }}
+          >
             IPO window will remain open from 10:00 AM till 5:00 PM on trading
             days. you can accept the UPI mandate request till 5:00 PM on the day
             off IPO close date. If you don't recieve the UPI request till the

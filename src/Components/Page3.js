@@ -12,7 +12,7 @@ import {
 import React from "react";
 import { useState, useEffect } from "react";
 
-export const Page3 = ({onChange}) => {
+export const Page3 = ({ onChange }) => {
   const [ipoDetails, setIpoDetails] = useState({
     ipo: 1,
     quantity: 1,
@@ -21,18 +21,18 @@ export const Page3 = ({onChange}) => {
     bidAmount: "",
     ipoType: 1,
     subCategory: 1,
-});
+  });
 
-const handleInputChange = (key, value) => {
-  setIpoDetails((prevDetails) => ({
-    ...prevDetails,
-    [key]: value,
-  }));
-};
+  const handleInputChange = (key, value) => {
+    setIpoDetails((prevDetails) => ({
+      ...prevDetails,
+      [key]: value,
+    }));
+  };
 
-useEffect(() => {
-  onChange(ipoDetails);
-}, [ipoDetails, onChange]);
+  useEffect(() => {
+    onChange(ipoDetails);
+  }, [ipoDetails, onChange]);
 
   return (
     <Container
@@ -45,7 +45,7 @@ useEffect(() => {
       <Box
         sx={{
           border: 1,
-          borderColor: 'grey.500',
+          borderColor: "grey.500",
           height: 700,
           display: "flex",
           justifyContent: "center",
@@ -53,13 +53,14 @@ useEffect(() => {
           padding: "10px",
         }}
       >
-        <Grid container
+        <Grid
+          container
           spacing={3}
           direction="column"
           alignItems="center"
           justifyContent="center"
           // sx={{ minHeight: "100vh" }}
-          >
+        >
           <Grid item xs={12}>
             <Typography variant="h4" gutterBottom>
               BSE IPO Details
@@ -70,8 +71,8 @@ useEffect(() => {
               BSE IPO
             </Typography>
             <Select
-            value={ipoDetails.ipo}
-            onChange={(e) => handleInputChange("ipo", e.target.value)}
+              value={ipoDetails.ipo}
+              onChange={(e) => handleInputChange("ipo", e.target.value)}
               sx={{
                 width: 400,
                 height: 40,
@@ -89,8 +90,8 @@ useEffect(() => {
               Quantity
             </Typography>
             <Select
-            value={ipoDetails.quantity}
-            onChange={(e) => handleInputChange("quantity", e.target.value)}
+              value={ipoDetails.quantity}
+              onChange={(e) => handleInputChange("quantity", e.target.value)}
               sx={{
                 width: 400,
                 height: 40,
@@ -105,7 +106,7 @@ useEffect(() => {
           </Grid>
           <Grid item xs={12}>
             <FormControlLabel
-            sx={{ marginRight: 35 }}
+              sx={{ marginRight: 35 }}
               control={<Checkbox defaultChecked />}
               label="Cut-off Price"
             />
@@ -144,8 +145,8 @@ useEffect(() => {
               BSE IPO Type
             </Typography>
             <Select
-            value={ipoDetails.ipoType}
-            onChange={(e) => handleInputChange("ipoType", e.target.value)}
+              value={ipoDetails.ipoType}
+              onChange={(e) => handleInputChange("ipoType", e.target.value)}
               sx={{
                 width: 400,
                 height: 40,
@@ -163,8 +164,8 @@ useEffect(() => {
               Sub Category
             </Typography>
             <Select
-            value={ipoDetails.subCategory}
-            onChange={(e) => handleInputChange("subCategory", e.target.value)}
+              value={ipoDetails.subCategory}
+              onChange={(e) => handleInputChange("subCategory", e.target.value)}
               sx={{
                 width: 400,
                 height: 40,
