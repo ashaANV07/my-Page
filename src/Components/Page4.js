@@ -1,7 +1,28 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { TextField, Typography, Container, Box, Grid } from "@mui/material";
 
-export const Page4 = () => {
+export const Page4 = ({ onChange }) => {
+  const [personalDetails, setPersonalDetails] = useState({
+    cdslNumber: "",
+    panNumber: "",
+    name: "",
+    mobileNumber: "",
+    email: "",
+    bankUPI: "",
+  });
+
+  const handleInputChange = (key, value) => {
+    setPersonalDetails((prevDetails) => ({
+      ...prevDetails,
+      [key]: value,
+    }));
+  };
+
+  useEffect(() => {
+    onChange(personalDetails);
+  }, [personalDetails, onChange]);
+
   return (
     <Container
       component="main"
@@ -13,16 +34,26 @@ export const Page4 = () => {
       <Box
         sx={{
           border: 1,
-          height: 600,
+          height: 700,
+          // width: 200,
+          borderColor: "grey.500",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          margin: "10px",
           padding: "10px",
         }}
       >
-        <Grid container spacing={2}>
+        <Grid
+          container
+          spacing={3}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          // sx={{ minHeight: "100vh" }}
+        >
           <Grid item xs={12}>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h4" gutterBottom>
               Personal Details
             </Typography>
           </Grid>
@@ -32,10 +63,13 @@ export const Page4 = () => {
             </Typography>
             <TextField
               id="outlined-basic"
-              label="Enter CDSL number"
               variant="outlined"
               size="small"
-              fullWidth
+              sx={{
+                width: 400,
+                height: 40,
+              }}
+              onChange={(e) => handleInputChange("cdslNumber", e.target.value)}
             />
           </Grid>
           <Grid item xs={12}>
@@ -44,10 +78,13 @@ export const Page4 = () => {
             </Typography>
             <TextField
               id="outlined-basic"
-              label="Enter Pan number"
               variant="outlined"
               size="small"
-              fullWidth
+              sx={{
+                width: 400,
+                height: 40,
+              }}
+              onChange={(e) => handleInputChange("panNumber", e.target.value)}
             />
           </Grid>
           <Grid item xs={12}>
@@ -56,10 +93,13 @@ export const Page4 = () => {
             </Typography>
             <TextField
               id="outlined-basic"
-              label="Enter name"
               variant="outlined"
               size="small"
-              fullWidth
+              sx={{
+                width: 400,
+                height: 40,
+              }}
+              onChange={(e) => handleInputChange("name", e.target.value)}
             />
           </Grid>
           <Grid item xs={12}>
@@ -69,10 +109,15 @@ export const Page4 = () => {
             <TextField
               type="number"
               id="outlined-basic"
-              label="Enter Mobile number"
               variant="outlined"
               size="small"
-              fullWidth
+              sx={{
+                width: 400,
+                height: 40,
+              }}
+              onChange={(e) =>
+                handleInputChange("mobileNumber", e.target.value)
+              }
             />
           </Grid>
           <Grid item xs={12}>
@@ -82,10 +127,13 @@ export const Page4 = () => {
             <TextField
               type="email"
               id="outlined-basic"
-              label="Enter your email"
               variant="outlined"
               size="small"
-              fullWidth
+              sx={{
+                width: 400,
+                height: 40,
+              }}
+              onChange={(e) => handleInputChange("email", e.target.value)}
             />
           </Grid>
           <Grid item xs={12}>
@@ -95,10 +143,13 @@ export const Page4 = () => {
             <TextField
               type="email"
               id="outlined-basic"
-              label="Enter Bank UPI"
               variant="outlined"
               size="small"
-              fullWidth
+              sx={{
+                width: 400,
+                height: 40,
+              }}
+              onChange={(e) => handleInputChange("bankUPI", e.target.value)}
             />
           </Grid>
         </Grid>
