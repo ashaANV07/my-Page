@@ -3,8 +3,23 @@ import { TextField, Typography, Container, Box, Grid } from "@mui/material";
 
 export const Page4 = () => {
   return (
-    <Container component="main" maxWidth="lg">
-      <Box sx={{ border: 1, height: 600, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <Container
+      component="main"
+      maxWidth="lg"
+      sx={{
+        margin: "10px",
+      }}
+    >
+      <Box
+        sx={{
+          border: 1,
+          height: 600,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "10px",
+        }}
+      >
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography variant="h5" gutterBottom>

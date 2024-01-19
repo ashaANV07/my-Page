@@ -7,14 +7,29 @@ import {
   Typography,
   Container,
   Box,
-  Grid
+  Grid,
 } from "@mui/material";
 import React from "react";
 
 export const Page3 = () => {
   return (
-    <Container component="main" maxWidth="lg">
-      <Box sx={{ border: 1, height: 600, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <Container
+      component="main"
+      maxWidth="lg"
+      sx={{
+        margin: "10px",
+      }}
+    >
+      <Box
+        sx={{
+          border: 1,
+          height: 600,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "10px",
+        }}
+      >
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography variant="h5" gutterBottom>
@@ -27,7 +42,7 @@ export const Page3 = () => {
             </Typography>
             <Select
               sx={{
-                width: '100%',
+                width: "100%",
                 height: 30,
               }}
             >
@@ -44,7 +59,7 @@ export const Page3 = () => {
             </Typography>
             <Select
               sx={{
-                width: '100%',
+                width: "100%",
                 height: 30,
               }}
             >
@@ -68,7 +83,7 @@ export const Page3 = () => {
               variant="outlined"
               size="small"
               sx={{
-                width: '100%',
+                width: "100%",
                 height: 30,
               }}
             />
@@ -83,7 +98,7 @@ export const Page3 = () => {
               variant="outlined"
               size="small"
               sx={{
-                width: '100%',
+                width: "100%",
                 height: 30,
               }}
             />
@@ -94,7 +109,7 @@ export const Page3 = () => {
             </Typography>
             <Select
               sx={{
-                width: '100%',
+                width: "100%",
                 height: 30,
               }}
             >
@@ -111,7 +126,7 @@ export const Page3 = () => {
             </Typography>
             <Select
               sx={{
-                width: '100%',
+                width: "100%",
                 height: 30,
               }}
             >

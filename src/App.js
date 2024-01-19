@@ -14,6 +14,7 @@ import {
 function App() {
   return (
     <Grid container spacing={2}>
+      {/* <Grid container> */}
       <Grid item xs={12} md={12}>
         <Typography
           variant="subtitle1"
@@ -27,17 +28,16 @@ function App() {
           off IPO close date. If you don't recieve the UPI request till the end
           of the day due to delays from the bank, kindlly delete and apply again
         </Typography>
-        <br />
       </Grid>
 
       <Grid container spacing={5} alignItems="center" justifyContent="center">
         <Grid item xs={12} sm={6}>
           <Page3
-            // sx={{
-            //   height: 140,
-            //   width: 100,
-            //   border: "2px solid black",
-            // }}
+            sx={{
+              height: 140,
+              width: 100,
+              border: "2px solid black",
+            }}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -52,10 +52,19 @@ function App() {
       </Grid>
 
       <Grid item xs={12} sm={12}>
-        <FormControlLabel control={<Checkbox defaultChecked />} />I hereby
-        understand that i have read the Red Herring Prospectus and i am an
-        eligible UPI bidder as per the application provision of the SEBI(Issue
-        of Capital and Disclosure Requirement) Regulation, 2018.
+        <FormControlLabel
+          control={<Checkbox defaultChecked />}
+          label={
+            <>
+              <Typography variant="body1" gutterBottom>
+                I hereby understand that i have read the Red Herring Prospectus
+                and i am an eligible UPI bidder as per the application provision
+                of the SEBI(Issue of Capital and Disclosure Requirement)
+                Regulation, 2018.
+              </Typography>
+            </>
+          }
+        />
       </Grid>
       <Grid item xs={12} sm={12}>
         <Box textAlign="center">
